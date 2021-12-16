@@ -1,0 +1,22 @@
+.pokeball-middle {
+  background-color: black;
+}
+
+.middle-container {
+  position: relative;
+}
+
+.middle-parent {
+  position: relative;
+  width: fixed;
+  /*top: 40%;*/
+}
+
+.ball-button {
+ position: absolute;
+  width: 20%;
+  /*height: 30%;*/
+  left: 40%;
+  bottom: 30%;
+  margin: 0 auto;
+}

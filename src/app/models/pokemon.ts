@@ -1,0 +1,20 @@
+export interface Pokemon {
+  height: number;
+  id: number;
+  name: string;
+  sprites: {
+    front_default: string;
+    other: {
+      'official-artwork': {
+        front_default: string;
+      };
+    };
+  };
+  types: [
+    {
+      type: {
+        name: string;
+      };
+    }
+  ];
+}

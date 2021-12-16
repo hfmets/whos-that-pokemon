@@ -1,0 +1,30 @@
+<div class="columns">
+  <div class="column is-one-third is-offset-one-third">
+    <div class="container">
+      <div class="section">
+        <div class="card" *ngIf="currentPokemon">
+          <header class="card-header">
+            <p class="card-header-title">
+              Who's That Pokemon!
+            </p>
+          </header>
+          <div class="card-image">
+            <figure class="image">
+              <img [ngClass]="{'blur': !revealed}" src={{pokemonImgUrl}} alt="">
+            </figure>
+          </div>
+          <div class="card-footer">
+            <a (click)="revealPokemon()" class="card-footer-item">Reveal</a>
+            <a (click)="getRandomPokemon()" class="card-footer-item">Next Pokemon</a>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div *ngIf="revealed" class="notification is-link has-text-centered">
+          <button class="delete"></button>
+          <h2 class="is-size-2">It's {{currentPokemon.name[0].toUpperCase() + currentPokemon.name.substring(1)}}!!!</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
