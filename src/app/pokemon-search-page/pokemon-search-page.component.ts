@@ -20,7 +20,7 @@ export class PokemonSearchPageComponent implements OnInit {
 
   getPokemon() {
     this.pokemonService
-      .getPokemonByName(this.pokemonSearchInput.toLowerCase())
+      .getPokemonByName(this.pokemonSearchInput.toLowerCase().replace(' ', '-'))
       .subscribe(
         (res) => {
           this.error = false;
